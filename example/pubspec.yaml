@@ -6,7 +6,7 @@ dependencies:
     path: ../
   video_player:
     git:
-      url: git@github.com:SteliyanH/plugins-fix.git
+      url: https://github.com/SteliyanH/plugins-fix.git
       path: packages/video_player/video_player
   auto_orientation: ^0.0.2
   flutter:

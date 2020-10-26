@@ -46,7 +46,6 @@ class ChewieState extends State<Chewie> {
   @override
   void dispose() {
     widget.controller.removeListener(listener);
-    widget.controller.dispose();
     super.dispose();
   }
 
@@ -284,12 +283,6 @@ class ChewieController extends ChangeNotifier {
   bool get isFullScreen => _isFullScreen;
 
   bool get isPlaying => videoPlayerController.value.isPlaying;
-
-  @override
-  void dispose() async {
-    await videoPlayerController.dispose();
-    super.dispose();
-  }
 
   Future _initialize() async {
     await videoPlayerController.setLooping(looping);
